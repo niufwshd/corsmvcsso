@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head runat="server">
+    <title>Login</title>
+    <link rel="Stylesheet" href="/style/style.css" type="text/css" />
+</head>
+<body>
+    <form id="form1" method="post" action="/home/login">
+        <table align="center" width="350px" style="align: center; margin-top: 150px;">
+            <tr>
+                <td>
+                    <fieldset style="width: 350px;" align="middle">
+                        <legend>Login to site " @Request.Url.Host "</legend>
+                        <table style="margin-left: 20px" align="left">
+                            <tr>
+                                <td>
+                                    user:
+                                </td>
+                                <td>
+                                    <input type="text" ID="txtUser" name="txtUser"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Password:
+                                </td>
+                                <td>
+                                    <input type="text" ID="txtPassword" name="txtPassword" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <input type="submit"  value="Login" ID="btnLogin" OnClick="btnLogin_Click" />
+                                    <label ID="lblLoginFailed"  Text="" />
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
+<script src="/Scripts/jquery-1.10.2.min.js"></script>
+<script language="javascript">
+    //$("#btnLogin").on("click", function () {
+    //    $.ajax({
+    //        type: "post",
+    //        url: "/home/login2",
+    //        data: { username: $("#txtUser").val(), password: $("#txtPassword").val() },
+    //        dataType: "json",
+    //        success:function(data)
+    //        {
+    //            $("#lblLoginFailed").text(data.info);
+    //        },
+    //        error:function()
+    //        {
+    //            alert("error");
+    //        }
+    //    });
+    //});
+</script>
+
